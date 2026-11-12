@@ -1,0 +1,6 @@
+{
+  "name": "마음 책방 (Mind Bookstore)",
+  "description": "오늘의 감정을 AI로 분석하고 따뜻한 위로와 맞춤 책을 추천해 주는 모바일 심리 서점",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,28 @@
+{
+  "entities": {
+    "AdminConfig": {
+      "title": "AdminConfig",
+      "description": "Configuration settings for AI prompts, models, and safety crisis words",
+      "type": "object",
+      "properties": {
+        "model": { "type": "string", "description": "Selected Gemini model identifier" },
+        "thinkingLevel": { "type": "string", "description": "Reasoning depth (LOW or MEDIUM)" },
+        "systemPrompt": { "type": "string", "description": "Base system instruction for sentiment analysis" },
+        "comfortGuide": { "type": "string", "description": "Guidelines for comfort tone generation" },
+        "celebrationGuide": { "type": "string", "description": "Guidelines for celebration tone generation" },
+        "maxMessageLength": { "type": "number", "description": "Max length of encouraging message" },
+        "crisisWords": { "type": "array", "description": "List of emergency keyword triggers" },
+        "crisisMessage": { "type": "string", "description": "Emergency help guidance message" },
+        "updatedAt": { "type": "string", "description": "ISO timestamp of last update" },
+        "updatedBy": { "type": "string", "description": "Email or UID of admin who made the update" }
+      },
+      "required": ["model", "thinkingLevel", "systemPrompt", "crisisWords"]
+    }
+  },
+  "firestore": {
+    "/admin_configs/{configId}": {
+      "schema": "AdminConfig",
+      "description": "Global administration AI configurations"
+    }
+  }
+}
